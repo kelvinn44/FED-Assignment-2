@@ -3,37 +3,37 @@
         "id": 1,
         "name": "Product 1",
         "price": 520,
-        "image": "images/1.webp"
+        "image": "images/1.jpg"
     },
     {
         "id": 2,
         "name": "Product 2",
         "price": 220,
-        "image": "images/2.webp"
+        "image": "images/2.jpg"
     },
     {
         "id": 3,
         "name": "Product 3",
         "price": 250,
-        "image": "images/3.webp"
+        "image": "images/3.jpg"
     }
     ,
     {
         "id": 4,
         "name": "Product 4",
         "price": 420,
-        "image": "images/4.webp"
+        "image": "images/4.jpg"
     },
     {
         "id": 5,
         "name": "Product 5",
         "price": 120,
-        "image": "images/5.webp"
+        "image": "images/5.jpg"
     },
     {
         "id": 6,
         "name": "Product 6",
         "price": 120,
-        "image": "images/6.webp"
+        "image": "images/6.jpg"
     }
 ]
