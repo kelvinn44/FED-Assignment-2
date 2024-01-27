@@ -3,30 +3,17 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Bmazon | Sign In</title>
+        <title>Bmazon | Sign In - Sign Up</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" type="image/x-icon" href="">
+        <link rel="icon" type="image/x-icon" href="images/BmazonIcon.jpg">
         <link rel="stylesheet" type="text/css" href="styles/Normalize.css">
-        <link rel="stylesheet" type="text/css" href="styles/signin.css">
+        <link rel="stylesheet" type="text/css" href="styles/signin_signup.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     </head>
     <body>
         <div class="container" id="container">
-            <div class="form-container sign-up-container">
-                <form action="">
-                    <h1>Create Account</h1>
-                    <input type="text" name="name" placeholder="Name" id="nameSignUp">
-                    <input type="email" name="email" placeholder="Email" id="emailSignUp">
-                    <input type="password" name="password" placeholder="password" id="passwordSignUp">
-                    
-                    <button id="Button-SignUp">Sign Up</button>
-        
-                    <a href="index.html">BACK TO HOME</a>
-                </form>
-            </div>
-        
             <div class="form-container sign-in-container">
-                <form action="#">
+                <form action="">
                     <h1>Sign In</h1>
                     <br>
                     <input type="email" name="email" placeholder="Email" id="emailSignIn">
@@ -35,7 +22,23 @@
                     <br>
                     <button id="ButtonSignIn">SIGN IN</button>
         
-                    <a href="index.html">Back to home</a>
+                    <a href="index.html">BACK TO HOME</a>
+                </form>
+            </div>
+
+            <div class="form-container sign-up-container">
+                <form action="">
+                    <h1>Sign Up</h1>
+                    <br>
+                    <input type="text" name="name" placeholder="Name" id="nameSignUp">
+                    <br>
+                    <input type="email" name="email" placeholder="Email" id="emailSignUp">
+                    <br>
+                    <input type="password" name="password" placeholder="Password" id="passwordSignUp">
+                    <br>
+                    <button id="Button-SignUp">SIGN UP</button>
+        
+                    <a href="index.html">BACK TO HOME</a>
                 </form>
             </div>
         
@@ -43,20 +46,21 @@
                 <div class="overlay">
                     <div class="overlay-panel overlay-left">
                         <h1>Welcome back to Bmazon!</h1>
-                        <p>Sign in and continue your shopping journey with us to earn discounts!</p>
+                        <p>Sign in and continue your shopping journey with us!</p>
                         <button class="ghost" id="signIn">SIGN IN</button>
                     </div>
                     <div class="overlay-panel overlay-right">
                         <h1>Join us!</h1>
-                        <p>Sign up for Bmazon! Earn points by playing our games</p>
+                        <p>Sign up for Bmazon! Earn points for discounts by playing our games</p>
                         <button class="ghost" id="signUp">SIGN UP</button>
                     </div>
                 </div>
             </div>
         </div>
         
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-        <script src="scripts/signin.js"></script>
+        <script src="scripts/signin_signup.js"></script>
     </body>
 </html>

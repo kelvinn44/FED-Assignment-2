@@ -5,16 +5,18 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Bmazon</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" type="image/x-icon" href="">
+        <link rel="icon" type="image/x-icon" href="images/BmazonIcon.jpg">
         <link rel="stylesheet" type="text/css" href="styles/Normalize.css">
         <link rel="stylesheet" type="text/css" href="styles/index.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     </head>
     <body>
       <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg custom-navbar">
           <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">Bmazon</a>
+            <a class="navbar-brand" href="index.html">
+              <img src="images/BmazonLogo.png" alt="Bmazon Logo">
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
               aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -33,36 +35,90 @@
               </ul>
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a href="signin.html" class="btn btn-outline-primary">Sign In</a>
+                  <a href="signin_signup.html" class="btn btn-primary">Sign In</a>
                 </li>
               </ul>
             </div>
           </div>
         </nav>
       </header>
-      <hr>
 
         <div class="jumbotron text-center">
           <h1>Welcome to Bmazon!</h1>
           <p>The all new and better eCommerce store.</p>
         </div>
         
+        <br>
         <div class="container">
           <div class="row">
-            <div class="col-sm-4">
-              <h3>Column 1</h3>
+            <div class="col-sm-4 text-center">
+              <h3>Column about 1</h3>
               <p>Lorem ipsum dolor..</p>
             </div>
-            <div class="col-sm-4">
-              <h3>Column 2</h3>
+            <div class="col-sm-4 text-center">
+              <h3>Column about 2</h3>
               <p>Lorem ipsum dolor..</p>
             </div>
-            <div class="col-sm-4">
-              <h3>Column 3</h3>
+            <div class="col-sm-4 text-center">
+              <h3>Column about 3</h3>
               <p>Lorem ipsum dolor..</p>
             </div>
           </div>
         </div>
+
+        <div class="container">
+          <!-- Featured Products Section -->
+          <div class="row">
+            <div class="col-sm-12 bg-info text-center text-white py-3">
+              <h3>Featured Products</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <!-- Featured product 1 -->
+              <div class="card">
+                <img src="images/1.jpg" class="card-img-top" alt="Product 1">
+                <div class="card-body">
+                  <h5 class="card-title">Product 1 (test)</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet.</p>
+                  <a href="store.html" class="btn btn-primary">View Details</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <!-- Featured product 2 -->
+              <div class="card">
+                <img src="images/2.jpg" class="card-img-top" alt="Product 2">
+                <div class="card-body">
+                  <h5 class="card-title">Product 2 (test)</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet.</p>
+                  <a href="store.html" class="btn btn-primary">View Details</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <!-- Featured product 3 -->
+              <div class="card">
+                <img src="images/3.jpg" class="card-img-top" alt="Product 2">
+                <div class="card-body">
+                  <h5 class="card-title">Product 3 (test)</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet.</p>
+                  <a href="store.html" class="btn btn-primary">View Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Play Our Game Section -->
+          <div class="row mt-4">
+            <div class="col-sm-12 bg-success text-center text-white py-3">
+              <h3>Play Our Game</h3>
+              <p>Explore our exciting game and have fun!</p>
+              <a href="game.html" class="btn btn-primary">Play Now</a>
+            </div>
+          </div>
+        </div>
+        <br>
         
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
