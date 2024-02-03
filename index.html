@@ -35,7 +35,8 @@
               </ul>
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a href="signin_signup.html" class="btn btn-primary">Sign In</a>
+                  <!-- Added an id to the sign-in button for easier targeting -->
+                  <button id="signInButton" onclick="toggleSignIn()" class="btn btn-primary">Sign In</button>
                 </li>
               </ul>
             </div>
@@ -43,25 +44,32 @@
         </nav>
       </header>
 
-        <div class="jumbotron text-center">
+      <div class="jumbotron text-center">
           <h1>Welcome to Bmazon!</h1>
-          <p>The all new and better eCommerce store.</p>
-        </div>
+          <p>The reliable eCommerce store :)</p>
+      </div>
+      <div class="d-flex align-items-center justify-content-center">
+        <dotlottie-player src="https://lottie.host/8de3ca23-d895-48bf-a953-52a6d407ea66/pQE1bDi555.json" 
+                background="transparent" speed="1" style="width: 180px; height: 180px;" loop autoplay>
+        </dotlottie-player>
+      </div>
         
-        <br>
         <div class="container">
           <div class="row">
             <div class="col-sm-4 text-center">
-              <h3>Column about 1</h3>
-              <p>Lorem ipsum dolor..</p>
+              <h3>Innovative Shopping Experience</h3>
+              <p>Discover innovation at Bmazon with our unique shopping experience. We merge gaming with online shopping, 
+                allowing you to earn points through gameplay, which you can then convert into discounts on your purchases.</p>
             </div>
             <div class="col-sm-4 text-center">
-              <h3>Column about 2</h3>
-              <p>Lorem ipsum dolor..</p>
+              <h3>Reliably Affordable Selection</h3>
+              <p>Browse through our dependable and budget-friendly range of products for unbeatable deals and consistent savings!</p>
             </div>
             <div class="col-sm-4 text-center">
-              <h3>Column about 3</h3>
-              <p>Lorem ipsum dolor..</p>
+              <h3>Interactive and User-Friendly Interface</h3>
+              <p>Enjoy an intuitive and interactive platform at Bmazon. 
+                Our user-friendly interface guarantees easy navigation, seamless browsing, and hassle-free purchases. 
+                Dive into a shopping experience designed for your convenience.</p>
             </div>
           </div>
         </div>
@@ -77,10 +85,12 @@
             <div class="col-sm-4">
               <!-- Featured product 1 -->
               <div class="card">
-                <img src="images/1.jpg" class="card-img-top" alt="Product 1">
+                <img src="images/Product1.jpg" class="card-img-top" alt="Product 1">
                 <div class="card-body">
-                  <h5 class="card-title">Product 1 (test)</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet.</p>
+                  <h5 class="card-title">SanDisk SDSSDE30-1TB-G25 USB 3.2 Gen 2 Portable SSD, 1TB,Black</h5>
+                  <p class="card-text">It has a portable design so you can take it with you on the go.
+                    Connect your device to the SSD using USB 3.2 technology.
+                    It has a 520 Mbps read and write time.</p>
                   <a href="store.html" class="btn btn-primary">View Details</a>
                 </div>
               </div>
@@ -88,10 +98,11 @@
             <div class="col-sm-4">
               <!-- Featured product 2 -->
               <div class="card">
-                <img src="images/2.jpg" class="card-img-top" alt="Product 2">
+                <img src="images/Product2.jpg" class="card-img-top" alt="Product 2">
                 <div class="card-body">
-                  <h5 class="card-title">Product 2 (test)</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet.</p>
+                  <h5 class="card-title">Tide Washing Machine Cleaner, (2.6oz each) (Pack of 5)</h5>
+                  <p class="card-text">Tide Washing Machine Cleaner powder packets designed to activate 20% faster than tablets, 
+                    enough for 5 months of cleaning from Tide, the #1 Laundry Brand.</p>
                   <a href="store.html" class="btn btn-primary">View Details</a>
                 </div>
               </div>
@@ -99,10 +110,11 @@
             <div class="col-sm-4">
               <!-- Featured product 3 -->
               <div class="card">
-                <img src="images/3.jpg" class="card-img-top" alt="Product 2">
+                <img src="images/Product3.jpg" class="card-img-top" alt="Product 2">
                 <div class="card-body">
-                  <h5 class="card-title">Product 3 (test)</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet.</p>
+                  <h5 class="card-title">NONIO Plus Whitening Toothpaste (High Concentration Fluorine 1,450 ppm Blend) Set, 4.6 oz (130 g) x 2 + Y-Shaped Floss</h5>
+                  <p class="card-text">This toothpaste can be used to thoroughly prevent breath odor and also care for whitening care.
+                    <br>Made in Japan.</p>
                   <a href="store.html" class="btn btn-primary">View Details</a>
                 </div>
               </div>
@@ -118,9 +130,11 @@
             </div>
           </div>
         </div>
-        <br>
+        <br>  
         
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+        <script src="scripts/index.js"></script>
     </body>
 </html>

@@ -1,21 +1,21 @@
 [
     {
         "id": 1,
-        "name": "Product 1",
-        "price": 520,
-        "image": "../images/1.jpg"
+        "name": "SanDisk SDSSDE30-1TB-G25 USB 3.2 Gen 2 Portable SSD, 1TB,Black",
+        "price": 79.89,
+        "image": "../images/Product1.jpg"
     },
     {
         "id": 2,
-        "name": "Product 2",
-        "price": 220,
-        "image": "../images/2.jpg"
+        "name": "Tide Washing Machine Cleaner, (2.6oz each) (Pack of 5)",
+        "price": 13.47,
+        "image": "../images/Product2.jpg"
     },
     {
         "id": 3,
-        "name": "Product 3",
-        "price": 250,
-        "image": "../images/3.jpg"
+        "name": "NONIO Plus Whitening Toothpaste (High Concentration Fluorine 1,450 ppm Blend) Set, 4.6 oz (130 g) x 2 + Y-Shaped Floss",
+        "price": 5.56,
+        "image": "../images/Product3.jpg"
     }
     ,
     {
