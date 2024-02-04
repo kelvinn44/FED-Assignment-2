@@ -88,7 +88,7 @@ function flipCard() {
 
 function checkForMatch() {
   let isMatch = firstCard.dataset.name === secondCard.dataset.name;
-
+  let ObjID = 0;
   if (isMatch) {
     disableCards();
     matchedPairs++; // Increment matched pairs count
@@ -99,7 +99,9 @@ function checkForMatch() {
   // Check if all pairs are matched
   if (matchedPairs === cards.length / 2) {
     alert("Congratulations! You've completed the game!");
-    // Perform any actions or navigate to another page when the game is complete
+
+    let currentScore = 0
+    //Retrieve user ID
     if (localStorage.getItem('isLoggedIn') === 'true'){
       $.ajax({
         type: "GET",
@@ -110,33 +112,44 @@ function checkForMatch() {
         },
         success: function (data) {
           let user = data.find(
-            (user) => user.Email == localStorage.getItem('Email') && user.Password == password
+            (user) => user.Email == localStorage.getItem('Email') && user.Password == localStorage.getItem('Password')
           );
           if (user) {
-            alert("Sign in successfully!\n Welcome back " + user.Name + "!");
-    
-            // Clear input fields
-            $("#emailSignIn").val("");
-            $("#passwordSignIn").val("");
-    
-            // Set flag to indicate user is logged in
-            localStorage.setItem('isLoggedIn', 'true');
-    
-            //add data to  local storage for current user
-            localStorage.setItem('Email', email);
-            localStorage.setItem('Password', password);
-    
-            // Redirect to preloader.html the index.html
-            window.location.href = "preloader.html";
+            ObjID = user._id; // ObjectID
+            currentScore = user.Score;
+            console.log("User ObjectID:", ObjID);
+            // Now you can use objectId in your subsequent operations
           } else {
-            alert("Invalid email or password");
-            $("#passwordSignIn").val("");
+            console.log("User not found");
           }
+
+          
         },
         error: function (error) {
           console.log(error);
         },
       });
+      let newScore = currentScore + score;
+        //Updating account
+      var jsondata = { "Score" : newScore };
+      var settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": `https://fedproject-3bfe.restdb.io/rest/account/${ObjID}`,
+        "method": "PUT",
+        "headers": {
+          "content-type": "application/json",
+          "x-apikey": "<your CORS apikey here>",
+          "cache-control": "no-cache"
+        },
+        "processData": false,
+        "data": JSON.stringify(jsondata)
+      };
+      
+      $.ajax(settings).done(function (response) {
+        console.log(response);
+      });
+      
     }
   }
 }
