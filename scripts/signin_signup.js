@@ -84,7 +84,7 @@ $("#Button-SignUp").click(function (event) {
       Name: name,
       Email: email,
       Password: password,
-      score: 0,
+      Score: 0,
     }),
     success: function (response) {
       alert("Sign up successfully!\n Welcome to Bmazon " + name + "!");

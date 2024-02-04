@@ -25,7 +25,7 @@ const gridContainer = document.querySelector(".grid-container");
 let cards = [];
 let firstCard, secondCard;
 let lockBoard = false;
-let score = 0;
+let score = 20;
 
 document.querySelector(".score").textContent = score;
 
@@ -78,7 +78,7 @@ function flipCard() {
   }
 
   secondCard = this;
-  score++;
+  score--;
   document.querySelector(".score").textContent = score;
   lockBoard = true;
 
@@ -115,7 +115,7 @@ function resetBoard() {
 function restart() {
   resetBoard();
   shuffle();
-  score = 0;
+  score = 20;
   document.querySelector(".score").textContent = score;
   gridContainer.innerHTML = "";
   generateCards();
