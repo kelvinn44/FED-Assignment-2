@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bmazon | Preloader</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="images/BmazonIcon.jpg">
+    <link rel="stylesheet" type="text/css" href="styles/Normalize.css">
+    <link rel="stylesheet" type="text/css" href="styles/preloader.css">
+  </head>
+
+  <body class="bg-blue">
+    <div>
+      <div class="animation-center">
+        <div style="display: block">
+          <dotlottie-player
+            src="https://lottie.host/32d1bedf-5674-40a2-83f6-bed61a8ddc2b/eGRPUwWf8l.json"
+            background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>
+        </div>
+      </div>
+
+      <div class="loading-text">
+        Redirecting to home page... Please wait<br>(redirect after 8 seconds, works only on external window)
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+    <script src="scripts/preloader.js"></script>
+  </body>
+</html>
