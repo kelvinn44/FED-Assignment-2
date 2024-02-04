@@ -8,6 +8,9 @@ function toggleSignIn() {
         // If button is in "Log Out" state, toggle back to "Sign In"
         signInButton.innerText = 'Sign In';
         localStorage.removeItem('isLoggedIn');
+
+        // Display alert when logging out
+        alert("You have been logged out successfully!");
     }
 }
 
