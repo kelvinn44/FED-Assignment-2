@@ -28,7 +28,8 @@ const gridContainer = document.querySelector(".grid-container");
 let cards = [];
 let firstCard, secondCard;
 let lockBoard = false;
-let score = 0;
+let score = 20;
+let matchedPairs = 0;
 
 document.querySelector(".score").textContent = score;
 
@@ -81,7 +82,7 @@ function flipCard() {
   }
 
   secondCard = this;
-  score++;
+  score--;
   document.querySelector(".score").textContent = score;
   lockBoard = true;
 
@@ -91,7 +92,56 @@ function flipCard() {
 function checkForMatch() {
   let isMatch = firstCard.dataset.name === secondCard.dataset.name;
 
-  isMatch ? disableCards() : unflipCards();
+  if (isMatch) {
+    disableCards();
+    matchedPairs++; // Increment matched pairs count
+  } else {
+    unflipCards();
+  }
+
+  // Check if all pairs are matched
+  if (matchedPairs === cards.length / 2) {
+    alert("Congratulations! You've completed the game!");
+    // Perform any actions or navigate to another page when the game is complete
+    if (localStorage.getItem('isLoggedIn') === 'true'){
+      $.ajax({
+        type: "GET",
+        url: "https://fedproject-3bfe.restdb.io/rest/account",
+        headers: {
+          "Content-Type": "application/json",
+          "x-apikey": "65b1b9947d4b3ea75e7e0415",
+        },
+        success: function (data) {
+          let user = data.find(
+            (user) => user.Email == localStorage.getItem('Email') && user.Password == password
+          );
+          if (user) {
+            alert("Sign in successfully!\n Welcome back " + user.Name + "!");
+    
+            // Clear input fields
+            $("#emailSignIn").val("");
+            $("#passwordSignIn").val("");
+    
+            // Set flag to indicate user is logged in
+            localStorage.setItem('isLoggedIn', 'true');
+    
+            //add data to  local storage for current user
+            localStorage.setItem('Email', email);
+            localStorage.setItem('Password', password);
+    
+            // Redirect to preloader.html the index.html
+            window.location.href = "preloader.html";
+          } else {
+            alert("Invalid email or password");
+            $("#passwordSignIn").val("");
+          }
+        },
+        error: function (error) {
+          console.log(error);
+        },
+      });
+    }
+  }
 }
 
 function disableCards() {
@@ -118,7 +168,7 @@ function resetBoard() {
 function restart() {
   resetBoard();
   shuffle();
-  score = 0;
+  score = 20;
   document.querySelector(".score").textContent = score;
   gridContainer.innerHTML = "";
   generateCards();

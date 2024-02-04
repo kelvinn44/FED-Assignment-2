@@ -52,6 +52,10 @@ $("#ButtonSignIn").click(function (event) {
         // Set flag to indicate user is logged in
         localStorage.setItem('isLoggedIn', 'true');
 
+        //add data to  local storage for current user
+        localStorage.setItem('Email', email);
+        localStorage.setItem('Password', password);
+
         // Redirect to preloader.html the index.html
         window.location.href = "preloader.html";
       } else {
@@ -84,6 +88,7 @@ $("#Button-SignUp").click(function (event) {
       Name: name,
       Email: email,
       Password: password,
+      Score: 0,
     }),
     success: function (response) {
       alert("Sign up successfully!\n Welcome to Bmazon " + name + "!");
@@ -95,6 +100,10 @@ $("#Button-SignUp").click(function (event) {
       
       // Set flag to indicate user is logged in
       localStorage.setItem('isLoggedIn', 'true');
+
+      //add data to  local storage for current user
+      localStorage.setItem('Email', email);
+      localStorage.setItem('Password', password);
 
       // Redirect to preloader.html then index.html
       window.location.href = "preloader.html";
