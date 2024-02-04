@@ -10,3 +10,7 @@
 .navbar-nav .nav-item .nav-link {
     font-size: 18px;
 }
+
+.jumbotron p {
+    margin-bottom: 0; /* Remove bottom margin */
+}

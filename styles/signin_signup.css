@@ -8,6 +8,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	font-family: 'Montserrat', sans-serif;
 	height: 100vh;
 	margin: -20px 0 50px;
 }
@@ -42,8 +43,8 @@ a {
 
 button {
 	border-radius: 20px;
-	border: 1px solid orange;
-	background-color: orange;
+	border: 1px solid #FF7F50;
+	background-color: #FF7F50;
 	color: #FFFFFF;
 	font-size: 12px;
 	font-weight: bold;
@@ -156,9 +157,9 @@ input {
 }
 
 .overlay {
-	background: #5f88aa;
-	background: -webkit-linear-gradient(to right, #508bbc, #508bbc);
-	background: linear-gradient(to right, #9CCAF0, #9CCAF0);
+	background: #F8C573;
+    background: -webkit-linear-gradient(to right, #F8C573, #F8C573);
+    background: linear-gradient(to right, #F8C573, #F8C573);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
