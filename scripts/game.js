@@ -121,6 +121,7 @@ function checkForMatch() {
             ObjID = user._id; // ObjectID
             currentScore = user.Score;
             console.log("User ObjectID:", ObjID);
+            console.log(user.Name);
             // Now you can use objectId in your subsequent operations
           } else {
             console.log("User not found");
@@ -132,8 +133,9 @@ function checkForMatch() {
           console.log(error);
         },
       });
+      
+      //Updating account
       let newScore = currentScore + score;
-        //Updating account
       var jsondata = { "Score" : newScore };
       var settings = {
         "async": true,
@@ -142,7 +144,7 @@ function checkForMatch() {
         "method": "PUT",
         "headers": {
           "content-type": "application/json",
-          "x-apikey": "<your CORS apikey here>",
+          "x-apikey": "65b1b9947d4b3ea75e7e0415",
           "cache-control": "no-cache"
         },
         "processData": false,
