@@ -3,37 +3,37 @@
         "id": 1,
         "name": "SanDisk SDSSDE30-1TB-G25 USB 3.2 Gen 2 Portable SSD, 1TB, Black",
         "price": 79.89,
-        "image": "/images/Product1.jpg"
+        "image": "images/Product1.jpg"
     },
     {
         "id": 2,
         "name": "Tide Washing Machine Cleaner, (2.6oz each) (Pack of 5)",
         "price": 13.47,
-        "image": "/images/Product2.jpg"
+        "image": "images/Product2.jpg"
     },
     {
         "id": 3,
         "name": "NONIO Plus Whitening Toothpaste (High Concentration Fluorine 1,450 ppm Blend) Set, 4.6 oz (130 g) x 2 + Y-Shaped Floss",
         "price": 5.56,
-        "image": "/images/Product3.jpg"
+        "image": "images/Product3.jpg"
     }
     ,
     {
         "id": 4,
         "name": "Command Picture and Frame Hanging Strips, Large, White, 14-Pairs",
         "price": 21.87,
-        "image": "/images/Product4.jpg"
+        "image": "images/Product4.jpg"
     },
     {
         "id": 5,
         "name": "Philips 929001916107 LEDBulb 12W 230V, Warm White (E27 3000K)",
         "price": 8.60,
-        "image": "/images/Product5.jpg"
+        "image": "images/Product5.jpg"
     },
     {
         "id": 6,
         "name": "SanDisk SDSQXAO-256G-GNCZN Nintendo Switch MicroSDXC Card, Yellow, 256GB",
         "price": 29.20,
-        "image": "/images/Product6.jpg"
+        "image": "images/Product6.jpg"
     }
 ]
