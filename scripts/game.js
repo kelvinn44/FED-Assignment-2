@@ -91,7 +91,6 @@ function flipCard() {
 
 function checkForMatch() {
   let isMatch = firstCard.dataset.name === secondCard.dataset.name;
-  let ObjID = 0;
   if (isMatch) {
     disableCards();
     matchedPairs++; // Increment matched pairs count
@@ -102,8 +101,8 @@ function checkForMatch() {
   // Check if all pairs are matched
   if (matchedPairs === cards.length / 2) {
     alert("Congratulations! You've completed the game!");
+    matchedPairs = 0;
 
-    let currentScore = 0
     //Retrieve user ID
     if (localStorage.getItem('isLoggedIn') === 'true'){
       $.ajax({
@@ -118,11 +117,42 @@ function checkForMatch() {
             (user) => user.Email == localStorage.getItem('Email') && user.Password == localStorage.getItem('Password')
           );
           if (user) {
-            ObjID = user._id; // ObjectID
-            currentScore = user.Score;
+            let ObjID = user._id; // ObjectID
+            let currentScore = user.Score;
             console.log("User ObjectID:", ObjID);
             console.log(user.Name);
-            // Now you can use objectId in your subsequent operations
+            
+            //Updating account
+            let newScore = currentScore + score;
+            console.log(newScore)
+            var jsondata = { 
+              "Email": user.Email,
+              "Password": user.Password,
+              "Name": user.Name,
+              "Score" : newScore
+            };
+            var settings = {
+                "async": true,
+                "crossDomain": true,
+                "url": ("https://fedproject-3bfe.restdb.io/rest/account/" + ObjID),
+                "method": "PUT",
+                "headers": {
+                    "content-type": "application/json",
+                    "x-apikey": "65b1b9947d4b3ea75e7e0415",
+                    "cache-control": "no-cache"
+                },
+                "processData": false,
+                "data": JSON.stringify(jsondata)
+            };
+            
+            $.ajax(settings)
+                .done(function (response) {
+                    console.log(response);
+                })
+                .fail(function (jqXHR, textStatus, errorThrown) {
+                    console.error("Error:", textStatus, errorThrown);
+                    console.log("Response:", jqXHR.responseText);
+                });
           } else {
             console.log("User not found");
           }
@@ -133,29 +163,8 @@ function checkForMatch() {
           console.log(error);
         },
       });
+    }  
       
-      //Updating account
-      let newScore = currentScore + score;
-      var jsondata = { "Score" : newScore };
-      var settings = {
-        "async": true,
-        "crossDomain": true,
-        "url": `https://fedproject-3bfe.restdb.io/rest/account/${ObjID}`,
-        "method": "PUT",
-        "headers": {
-          "content-type": "application/json",
-          "x-apikey": "65b1b9947d4b3ea75e7e0415",
-          "cache-control": "no-cache"
-        },
-        "processData": false,
-        "data": JSON.stringify(jsondata)
-      };
-      
-      $.ajax(settings).done(function (response) {
-        console.log(response);
-      });
-      
-    }
   }
 }
 
@@ -168,8 +177,10 @@ function disableCards() {
 
 function unflipCards() {
   setTimeout(() => {
-    firstCard.classList.remove("flipped");
-    secondCard.classList.remove("flipped");
+    if (firstCard && secondCard) {
+      firstCard.classList.remove("flipped");
+      secondCard.classList.remove("flipped");
+    }
     resetBoard();
   }, 1000);
 }
