@@ -59,8 +59,9 @@ header .head2 .totalQuantity{
     gap: 20px;
 }
 .listProduct .item img{
+    text-align: center;
     width: 100%;
-        height: auto;
+    height: 400px;
     object-fit: cover;
 }
 .listProduct .item{
