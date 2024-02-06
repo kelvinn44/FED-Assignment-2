@@ -1,6 +1,10 @@
 //Test account - Email: John@doe.com ; Password: Password123
 // ^Email and Password are case-sensitive.
 
+const signInButton = document.getElementById("signIn");
+const signUpButton = document.getElementById("signUp");
+const container = document.getElementById("container");
+
 // Sign In form submission
 $("#signInForm").submit(function(event) {
   event.preventDefault(); // Prevent default form submission behavior
@@ -13,13 +17,10 @@ $("#signUpForm").submit(function(event) {
   $("#Button-SignUp").click(); // Trigger click event on the Sign Up button
 });
 
-const signInButton = document.getElementById("signIn");
-const signUpButton = document.getElementById("signUp");
-const container = document.getElementById("container");
-
 signInButton.addEventListener("click", () => {
   container.classList.remove("right-panel-active");
 });
+
 signUpButton.addEventListener("click", () => {
   container.classList.add("right-panel-active");
 });
@@ -52,14 +53,14 @@ $("#ButtonSignIn").click(function (event) {
         // Set flag to indicate user is logged in
         localStorage.setItem('isLoggedIn', 'true');
 
-        //add data to  local storage for current user
+        //add data to local storage for current user
         localStorage.setItem('Email', email);
         localStorage.setItem('Password', password);
 
         // Redirect to preloader.html the index.html
         window.location.href = "preloader.html";
       } else {
-        alert("Invalid email or password");
+        alert("Invalid email or password, please try again.");
         $("#passwordSignIn").val("");
       }
     },
@@ -101,7 +102,7 @@ $("#Button-SignUp").click(function (event) {
       // Set flag to indicate user is logged in
       localStorage.setItem('isLoggedIn', 'true');
 
-      //add data to  local storage for current user
+      //add data to local storage for current user
       localStorage.setItem('Email', email);
       localStorage.setItem('Password', password);
 
@@ -118,7 +119,7 @@ $("#Button-SignUp").click(function (event) {
       }
       
       // Display error message
-      alert("Sign up failed: " + errorMessage);
+      alert("Sign up failed: " + errorMessage + "\nPlease try again.");
       console.log(error + "\t" + status);
       $("#passwordSignUp").val("");
     },

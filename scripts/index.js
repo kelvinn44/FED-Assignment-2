@@ -7,6 +7,11 @@ function toggleSignIn() {
     } else {
         // If button is in "Log Out" state, toggle back to "Sign In"
         signInButton.innerText = 'Sign In';
+
+        // Change button color back to blue
+        signInButton.classList.remove('btn-danger');
+        signInButton.classList.add('btn-primary');
+
         localStorage.removeItem('isLoggedIn');
 
         // Display alert when logging out
@@ -17,8 +22,15 @@ function toggleSignIn() {
 // Check if user is already logged in on page load
 window.onload = function() {
     var signInButton = document.getElementById('signInButton');
+
+    var nameSpan = document.getElementById('Name');
+
     if (localStorage.getItem('isLoggedIn') === 'true') {
         // If user is logged in, change button text to "Log Out"
         signInButton.innerText = 'Log Out';
+
+        // Change button color to red
+        signInButton.classList.remove('btn-primary');
+        signInButton.classList.add('btn-danger');
     }
 };
