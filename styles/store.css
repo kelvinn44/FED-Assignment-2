@@ -1,6 +1,5 @@
 .custom-navbar {
     background-color: coral;
-    width: max-content;
 }
 
 .navbar-brand img {
@@ -26,10 +25,10 @@ a{
     max-width: 90%;
     transition: transform 1s;
 }
-header img{
+header .head2 img{
     width: 60px;
 }
-header{
+header .head2{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -38,7 +37,7 @@ header .iconCart{
     position: relative;
     z-index: 1;
 }
-header .totalQuantity{
+header .head2 .totalQuantity{
     position: absolute;
     top: 0;
     right: 0;
