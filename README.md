@@ -54,7 +54,8 @@ As a user of this website, we want to use it to purchase essentials and play the
    5. After that you'll see the blue "Sign In" button text and colour change to "Log out" and red, respectively.
    6. When you click on the "Log Out" button, it will show you a successful log out alert and change back to the "Sign In" text and colour. And when you click it, it will bring you to the Sign In - Sign Up page again.
 2. Card game
-   1. ...
+   1. Click on the game tab in the navigation bar.
+   2. You will see twelve cards and when clicked on it will display a image of a product sold in the store and to win the game you need to open and match cards to the same product.
 3. Store & Checkout
    1. ...
 
