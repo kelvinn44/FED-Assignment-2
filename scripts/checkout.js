@@ -41,7 +41,7 @@ function addCartToHTML(){
                     console.log("User ObjectID:", ObjID);
                     console.log(user.Name);
 
-                    discount = currentScore * 0.10
+                    discount = (currentScore * 0.10).toFixed(2)
                     console.log(discount);
 
                     discountHTML.innerText = '$' + discount;
