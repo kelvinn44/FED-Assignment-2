@@ -22,9 +22,6 @@ function toggleSignIn() {
 // Check if user is already logged in on page load
 window.onload = function() {
     var signInButton = document.getElementById('signInButton');
-
-    var nameSpan = document.getElementById('Name');
-
     if (localStorage.getItem('isLoggedIn') === 'true') {
         // If user is logged in, change button text to "Log Out"
         signInButton.innerText = 'Log Out';
