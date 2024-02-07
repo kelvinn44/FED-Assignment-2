@@ -86,8 +86,12 @@ function addCartToHTML(){
 const fullNameInput = document.getElementById('name');
 const phoneNumberInput = document.getElementById('phone');
 const addressInput = document.getElementById('address');
-
+const cardInput = document.getElementById('Card number');
+const cvvInput = document.getElementById('CVV2');
+const expiryInput = document.getElementById('Expiry');
 let inputField = true;
+
+
 console.log(inputField)
 function toggleCheckoutButton() {
     // Get the checkout button
@@ -96,11 +100,17 @@ function toggleCheckoutButton() {
     const fullName = fullNameInput.value.trim();
     const phoneNumber = phoneNumberInput.value.trim();
     const address = addressInput.value.trim();
+    const card = cardInput.value.trim();
+    const cvv = cvvInput.value.trim();
+    const expiry = expiryInput.value.trim();
     console.log(fullName);
     console.log(phoneNumber);
     console.log(address);
+    console.log(card);
+    console.log(cvv);
+    console.log(expiry);
     // Set inputField to true if any of the fields are empty
-    inputField = !fullName || !phoneNumber || !address;
+    inputField = !fullName || !phoneNumber || !address || !card || !cvv || !expiry;
     console.log(inputField)
     // Enable or disable the checkout button based on the inputField value
     checkoutButton.disabled = inputField;
@@ -110,7 +120,9 @@ function toggleCheckoutButton() {
 fullNameInput.addEventListener('input', toggleCheckoutButton);
 phoneNumberInput.addEventListener('input', toggleCheckoutButton);
 addressInput.addEventListener('input', toggleCheckoutButton);
-
+cardInput.addEventListener('input', toggleCheckoutButton);
+cvvInput.addEventListener('input', toggleCheckoutButton);
+expiryInput.addEventListener('input', toggleCheckoutButton);
 // Checkout button click event handler
 checkoutButton.addEventListener('click', function() {
     if (!inputField) {

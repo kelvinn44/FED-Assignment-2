@@ -198,7 +198,7 @@ header .head2 .totalQuantity{
     padding-bottom: 20px;
 }
 .checkoutLayout .form h1,
-.checkoutLayout .form .group:nth-child(-n+3){
+.checkoutLayout .form .group:nth-child(-n+4){
     grid-column-start: 1;
     grid-column-end: 3;
 }
