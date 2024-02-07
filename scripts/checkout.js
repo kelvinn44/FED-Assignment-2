@@ -86,7 +86,7 @@ function addCartToHTML(){
 const fullNameInput = document.getElementById('name');
 const phoneNumberInput = document.getElementById('phone');
 const addressInput = document.getElementById('address');
-const cardInput = document.getElementById('Card number');
+const cardInput = document.getElementById('cardnumber');
 const cvvInput = document.getElementById('CVV2');
 const expiryInput = document.getElementById('Expiry');
 let inputField = true;
@@ -126,7 +126,7 @@ expiryInput.addEventListener('input', toggleCheckoutButton);
 // Checkout button click event handler
 checkoutButton.addEventListener('click', function() {
     if (!inputField) {
-        alert("Checkout completed. Thanks for shopping! See you again.");
+        alert("Checkout completed.\n Thanks for shopping with Bmazon!\n See you again.");
         listCart = [];
         document.cookie = "listCart=" + JSON.stringify(listCart);
     } else {
