@@ -22,12 +22,14 @@ As a user of this website, I want to use it to purchase essentials and play the 
 4. In the store and checkout page, user can browse products or purchase products respectively.
 
 ## Technologies Used
+- [GitHub](https://github.com/)
+    - This project uses **GitHub** to collaborate, host and deploy as a website, and keep track of changes.
 - [Visual Studio Code](https://code.visualstudio.com/)
     - This project uses **Visual Studio Code** to develop the HTML pages, CSS, and JavaScript.
 - [Bootstrap](https://getbootstrap.com/)
   - This project uses **Bootstrap** to help with website responsiveness and creation of the navbar.
 - [JQuery](https://jquery.com/)
-    - The project uses **JQuery** to simplify DOM manipulation.
+    - This project uses **JQuery** to simplify DOM manipulation.
 - [RestDB API](https://restdb.io/)
     - This project uses **RestDB API** to help with account creation, handling, and signing in.
 - [Lottie](https://lottiefiles.com/)
@@ -43,7 +45,7 @@ As a user of this website, I want to use it to purchase essentials and play the 
 - [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
   - This project uses **Javascript** to help with making the website interactive.
 - [Normalize.css](https://necolas.github.io/normalize.css/)
-  - This project uses ***Normalize.css*** to help with making browsers render all elements more consistently and in line with modern standards.
+  - This project uses **Normalize.css** to help with making browsers render all elements more consistently and in line with modern standards.
 
 ## Testing
 1. Sign in - Sign up & Log out (Test account - Email: John@doe.com ; Password: Password123 , Email and Password are case-sensitive.)
@@ -52,7 +54,7 @@ As a user of this website, I want to use it to purchase essentials and play the 
    3. If you were at the Sign Up form, and want to go back to the Sign In form, click "SIGN IN?".
    4. After Signing in or Signing up, the website will show a successful or unsuccessful alert respectively. If unsucessful, it will ask you to try again. If successful, it will redirect you to a 8 second preloader to the Home page.
    5. After that you'll see the blue "Sign In" button text and colour change to "Log out" and red, respectively.
-   6. When you click on the "Log Out" button, it will show you a successful log out alert and change back to the "Sign In" text and colour. And when you click it, it will bring you to the Sign In - Sign Up page again.
+   6. When you click on the red "Log Out" button, it will show you a successful log out alert and change back to the blue "Sign In" button. And when you click it, it will bring you to the Sign In - Sign Up page again.
 2. Card matching game
    1. Click on the game tab in the navigation bar.
    2. You will see twelve cards and when clicked on, it will display a image of a product sold in our store and to win the game you need to click and match the cards to the same product.
