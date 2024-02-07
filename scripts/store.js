@@ -112,7 +112,7 @@ function addCart($idProduct){
         //I just increased the quantity
         listCart[$idProduct].quantity++;
     }
-    document.cookie = "listCart=" + JSON.stringify(listCart) + "; expires=Thu, 31 Dec 2025 23:59:59 UTC; path=/;";
+    document.cookie = "listCart=" + JSON.stringify(listCart) + "; expires=Wed, 31 Dec 2025 23:59:59 UTC; path=/;";
 
     addCartToHTML();
 }
@@ -134,7 +134,7 @@ function addCartToHTML(){
                     `<img src="${product.image}">
                     <div class="content">
                         <div class="name">${product.name}</div>
-                        <div class="price">$${product.price} / 1 product</div>
+                        <div class="price">$${product.price} / 1 Product</div>
                     </div>
                     <div class="quantity">
                         <button onclick="changeQuantity(${product.id}, '-')">-</button>
@@ -166,7 +166,7 @@ function changeQuantity($idProduct, $type){
             break;
     }
     // save new data in cookie
-    document.cookie = "listCart=" + JSON.stringify(listCart) + "; expires=Thu, 31 Dec 2025 23:59:59 UTC; path=/;";
+    document.cookie = "listCart=" + JSON.stringify(listCart) + "; expires=Wed, 31 Dec 2025 23:59:59 UTC; path=/;";
     // reload html view cart
     addCartToHTML();
 }
