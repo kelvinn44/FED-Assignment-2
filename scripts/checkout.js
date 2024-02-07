@@ -68,10 +68,10 @@ function addCartToHTML(){
                     `<img src="${product.image}">
                     <div class="info">
                         <div class="name">${product.name}</div>
-                        <div class="price">$${product.price} / 1 Product</div>
+                        <div class="price">$${(product.price).toFixed(2)} / 1 Product</div>
                     </div>
                     <div class="quantity">${product.quantity}</div>
-                    <div class="returnPrice">$${product.price * product.quantity}</div>`;
+                    <div class="returnPrice">$${(product.price * product.quantity).toFixed(2)}</div>`;
                 listCartHTML.appendChild(newCart);
                 totalQuantity = totalQuantity + product.quantity;
                 totalPrice = totalPrice + (product.price * product.quantity);
@@ -79,8 +79,8 @@ function addCartToHTML(){
             }
         })
     }
-    totalQuantityHTML.innerText = totalQuantity;
-    totalPriceHTML.innerText = '$' + totalPrice;
+    totalQuantityHTML.innerText = (totalQuantity).toFixed(2);
+    totalPriceHTML.innerText = '$' + (totalPrice).toFixed(2);
     
 }
 const fullNameInput = document.getElementById('name');
