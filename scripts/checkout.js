@@ -79,7 +79,7 @@ function addCartToHTML(){
             }
         })
     }
-    totalQuantityHTML.innerText = (totalQuantity).toFixed(2);
+    totalQuantityHTML.innerText = totalQuantity;
     totalPriceHTML.innerText = '$' + (totalPrice).toFixed(2);
     
 }
