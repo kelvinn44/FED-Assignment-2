@@ -107,7 +107,7 @@ function checkForMatch() {
     unflipCards();
   }
 
-  // Check if all pairs are matched
+  // Check if all pairs are matched 
   if (matchedPairs === cards.length / 2) {
     alert("Congratulations! You've completed the game!");
     matchedPairs = 0;
