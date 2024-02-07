@@ -58,7 +58,6 @@ function addCartToHTML(){
             });
         }
 
-
         // writing checkout page html
         listCart.forEach(product => {
             if(product){
@@ -79,10 +78,10 @@ function addCartToHTML(){
             }
         })
     }
-    totalQuantityHTML.innerText = (totalQuantity).toFixed(2);
+    totalQuantityHTML.innerText = (totalQuantity);
     totalPriceHTML.innerText = '$' + (totalPrice).toFixed(2);
-    
 }
+
 const fullNameInput = document.getElementById('name');
 const phoneNumberInput = document.getElementById('phone');
 const addressInput = document.getElementById('address');
