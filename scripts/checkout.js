@@ -87,22 +87,23 @@ const fullNameInput = document.getElementById('name');
 const phoneNumberInput = document.getElementById('phone');
 const addressInput = document.getElementById('address');
 
-// Function to enable or disable the checkout button based on the input fields' values
+let inputField = true;
+console.log(inputField)
 function toggleCheckoutButton() {
     // Get the checkout button
     const checkoutButton = document.querySelector('.buttonCheckout');
     
-    // Check if all input fields have values
     const fullName = fullNameInput.value.trim();
     const phoneNumber = phoneNumberInput.value.trim();
     const address = addressInput.value.trim();
-
-    // Enable or disable the checkout button based on the input fields' values
-    if (fullName && phoneNumber && address) {
-        checkoutButton.disabled = false;
-    } else {
-        checkoutButton.disabled = true;
-    }
+    console.log(fullName);
+    console.log(phoneNumber);
+    console.log(address);
+    // Set inputField to true if any of the fields are empty
+    inputField = !fullName || !phoneNumber || !address;
+    console.log(inputField)
+    // Enable or disable the checkout button based on the inputField value
+    checkoutButton.disabled = inputField;
 }
 
 // Add event listeners to input fields to check for changes
@@ -110,14 +111,13 @@ fullNameInput.addEventListener('input', toggleCheckoutButton);
 phoneNumberInput.addEventListener('input', toggleCheckoutButton);
 addressInput.addEventListener('input', toggleCheckoutButton);
 
-
+// Checkout button click event handler
 checkoutButton.addEventListener('click', function() {
-    if (checkoutButton. disabled === true){
-        alert("Checkout completed \nThanks for shopping! See you again.");
+    if (!inputField) {
+        alert("Checkout completed. Thanks for shopping! See you again.");
         listCart = [];
-        document.cookie = "listCart=" + JSON.stringify(listCart)
-    }
-    else{
+        document.cookie = "listCart=" + JSON.stringify(listCart);
+    } else {
         alert("Please fill out checkout information.");
     }
 });
