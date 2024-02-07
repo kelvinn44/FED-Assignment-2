@@ -11,6 +11,10 @@
     font-size: 18px;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 .game{
     min-height: 100vh;
     min-width: 100vw;
