@@ -1,4 +1,10 @@
 let listCart = [];
+let checkoutButton = document.querySelector('.buttonCheckout');
+checkoutButton.addEventListener('click', function() {
+    alert("Congratulations! You've completed the game!");
+    listCart = [];
+    document.cookie = "listCart=" + JSON.stringify(listCart)
+});
 function checkCart(){
         var cookieValue = document.cookie
         .split('; ')
@@ -13,7 +19,6 @@ function addCartToHTML(){
     // clear data default
     let listCartHTML = document.querySelector('.returnCart .list');
     listCartHTML.innerHTML = '';
-    
     let totalQuantityHTML = document.querySelector('.totalQuantity');
     let totalPriceHTML = document.querySelector('.totalPrice');
     let discountHTML = document.querySelector('.discount');

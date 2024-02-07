@@ -24,7 +24,6 @@ a{
     margin: auto;
     max-width: 90%;
     transition: transform 1s;
-    text-align: center;
 }
 header .head2 img{
     width: 60px;
@@ -63,6 +62,7 @@ header .head2 .totalQuantity{
 .listProduct .item img{
     text-align: center;
     width: 75%;
+    height: auto;
     object-fit: cover;
 }
 .listProduct .item{
@@ -266,6 +266,13 @@ header .head2 .totalQuantity{
             height: auto;
         object-fit: cover;
     }
+    .listProduct .item h2{
+        font-weight: 700;
+        font-size: large;
+    }
+    .listProduct .item .price{
+        font-size: large;
+    }
 }
 
 
@@ -278,5 +285,12 @@ header .head2 .totalQuantity{
         width: 100%;
             height: auto;
         object-fit: cover;
+    }
+    .listProduct .item h2{
+        font-weight: 700;
+        font-size: small;
+    }
+    .listProduct .item .price{
+        font-size: small;
     }
 }
