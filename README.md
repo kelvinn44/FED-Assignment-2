@@ -30,8 +30,8 @@ As a user of this website, we want to use it to purchase essentials and play the
     - The project uses **JQuery** to simplify DOM manipulation.
 - [RestDB API](https://restdb.io/)
     - This project uses **RestDB API** to help with account creation, handling, and signing in.
-- [Lottie animation](https://lottiefiles.com/)
-    - This project uses **Lottie animation** to help with graphics.
+- [Lottie](https://lottiefiles.com/)
+    - This project uses **Lottie** to help with graphical animation.
 - [Adobe XD](https://helpx.adobe.com/sg/xd/help/adobe-xd-overview.html)
   - This project uses **Adobe XD** to help with the creation of wireframes.
 - [JSON](https://www.json.org/json-en.html)
@@ -46,7 +46,7 @@ As a user of this website, we want to use it to purchase essentials and play the
   - This project uses ***Normalize.css*** to help with making browsers render all elements more consistently and in line with modern standards.
 
 ## Testing
-1. Sign in - Sign up & Log out
+1. Sign in - Sign up & Log out (Test account - Email: John@doe.com ; Password: Password123 , Email and Password are case-sensitive.)
    1. Click on the blue "Log in" button on either Home, Game, or Store page.
    2. You will see the Sign In form, either Sign In with an existing account or click "Sign Up?" to go to the Sign Up form to create a new account.
    3. If you were at the Sign Up form, and want to go back to the Sign In form, click "Sign In?".
