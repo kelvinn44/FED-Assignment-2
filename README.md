@@ -35,7 +35,7 @@ As a user of this website, I want to use it to purchase essentials and play the 
 - [Adobe XD](https://helpx.adobe.com/sg/xd/help/adobe-xd-overview.html)
   - This project uses **Adobe XD** to help with the creation of wireframes.
 - [JSON](https://www.json.org/json-en.html)
-  - This project uses **JSON** to help with product listing, and card game product image appearance.
+  - This project uses **JSON** to help with product listing, and card matching game product image appearance.
 - [HTML](https://html.spec.whatwg.org/)
   - This project uses **HTML** to help with the structure and creation of the website.
 - [CSS](https://www.w3.org/Style/CSS/Overview.en.html)
