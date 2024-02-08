@@ -10,6 +10,9 @@ https://kelvinn44.github.io/FED-Assignment-2/
 ## About
 Introducing Bmazon, the reliable eCommerce store! We provide essentials at affordable prices for you. By playing our card matching game, you would gain more discounts on top of our affordable products. Bmazon is always at your service :)
 
+## Pitch
+[FED_Bmazon_pitch.mp4 ](https://drive.google.com/file/d/1sOe0cl_DI6fBEzNsXNHT2iUYxn4jIo7w/view?usp=sharing)
+
 ## Design Process
 As a user of this website, I want to use it to purchase essentials and play the card matching game in the website to earn more discounts. For instance, when I'm in the home page, I can read the brief features about Bmazon, view featured products, and interact at the section where they are promoting their card matching game. The game page is where I can play the card matching game and the store page is where I can browse, and purchase essentials.
 
