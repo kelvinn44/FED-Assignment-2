@@ -55,6 +55,7 @@ $("#ButtonSignIn").click(function (event) {
 
         //add data to local storage for current user
         localStorage.setItem('Email', email);
+        localStorage.setItem('Name', user.Name);
         localStorage.setItem('Password', password);
 
         // Redirect to preloader.html the index.html
@@ -104,6 +105,7 @@ $("#Button-SignUp").click(function (event) {
 
       //add data to local storage for current user
       localStorage.setItem('Email', email);
+      localStorage.setItem('Name', name);
       localStorage.setItem('Password', password);
 
       // Redirect to preloader.html then index.html
