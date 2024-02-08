@@ -1,3 +1,6 @@
+// Initialise the name
+const Name = document.querySelector(".Name");
+
 // Function to toggle sign in state
 function toggleSignIn() {
     var signInButton = document.getElementById('signInButton');
@@ -14,6 +17,9 @@ function toggleSignIn() {
 
         localStorage.removeItem('isLoggedIn');
 
+        // Remove user name when logged out
+        Name.innerText = "";
+
         // Display alert when logging out
         alert("You have been logged out successfully!");
     }
@@ -25,6 +31,10 @@ window.onload = function() {
     if (localStorage.getItem('isLoggedIn') === 'true') {
         // If user is logged in, change button text to "Log Out"
         signInButton.innerText = 'Log Out';
+
+        // To display user name next to btn
+        let name = localStorage.getItem('Name')
+        Name.innerText = `${name}`;
 
         // Change button color to red
         signInButton.classList.remove('btn-primary');
