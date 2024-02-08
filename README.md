@@ -17,7 +17,7 @@ As a user of this website, I want to use it to purchase essentials and play the 
 
 ## Features
 1. In the sign in - sign up page, user can sign in to a existing account or create a new account.
-2. The "Sign In"/"Log Out" button would change from Blue to Red or Red to Blue when a account has been logged in or logged out respectively.
+2. The "Sign In"/"Log Out" button would change from Blue to Red or Red to Blue when a account has been logged in or logged out respectively. Your name will also appear next to the Red "Log Out" button when you're signed in.
 3. In the game page, user can play our card matching game and earn points for discount ($0.10/point), the score will be saved when user is signed in with an account and they can continue to earn more points on top of their previous points.
 4. In the store and checkout page, user can browse products or purchase products respectively.
 
@@ -53,8 +53,8 @@ As a user of this website, I want to use it to purchase essentials and play the 
    2. You will see the Sign In form, either Sign In with an existing account or click "SIGN UP?" to go to the Sign Up form to create a new account.
    3. If you were at the Sign Up form, and want to go back to the Sign In form, click "SIGN IN?".
    4. After Signing in or Signing up, the website will show a successful or unsuccessful alert respectively. If unsucessful, it will ask you to try again. If successful, it will redirect you to a 8 second preloader to the Home page.
-   5. After that you'll see the blue "Sign In" button text and colour change to "Log out" and red, respectively.
-   6. When you click on the red "Log Out" button, it will show you a successful log out alert and change back to the blue "Sign In" button. And when you click it, it will bring you to the Sign In - Sign Up page again.
+   5. After that you'll see the blue "Sign In" button text and colour change to "Log out" and red, respectively. Your name will also appear next to the button.
+   6. When you click on the red "Log Out" button, it will show you a successful log out alert and change back to the blue "Sign In" button and the name next to the button will also be removed. And when you click on the blue "Sign In" button, it will bring you to the Sign In - Sign Up page again.
 2. Card matching game
    1. Click on the game tab in the navigation bar.
    2. You will see twelve cards and when clicked on, it will display a image of a product sold in our store and to win the game you need to click and match the cards to the same product.
