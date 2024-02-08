@@ -46,15 +46,15 @@
           <div class="jumbotron text-center">
             <h1>Card Matching Game</h1>
           </div>
-          <div class = "Instructions">
-            <h4>
-              <ul>1. The objective of the card matching game is to find and match all pairs of cards.</ul>
-              <ul>2. First click on a card to reveal the image then click on another card to find the matching image.</ul>
-              <ul>3. After reavealing two cards,the score will be deducted by 1. If the cards match you have found a pair;
-              else the cards will be hidden again.</ul>
-              <ul>4. The game ends when all pairs are found. For each score leftover after completing the game, 
-                you are awarded a $0.10 discount if you are logged in.</ul>
-            </h4>
+          <div class="Instructions">
+            <p class="mb-0 fs-5 fst-italic">The objective of the game is to find and match all pairs of cards. The base score is 20.</p>
+            <ol>
+                <li>First click on a card to reveal the image then click on another card to find the matching pair.</li>
+                <li>After revealing two cards and if they do not match, the score will be deducted by 1 and the cards will be hidden 
+                  again. If the cards match, you have found a pair.</li>
+                <li>The game ends when all pairs are found. For each score that you've earned after completing the game, 
+                  you are awarded a $0.10 discount per score if you are logged in.</li>
+            </ol>
           </div>
           <div class="grid-container">
 
@@ -66,6 +66,7 @@
             <Button onclick="restart()">Restart</Button>
           </div>
         </div>
+        <br>
 
         <footer style="background-color: #1F262D;">
           <div class="text-center py-3">
